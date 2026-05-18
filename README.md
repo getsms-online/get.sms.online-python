@@ -12,12 +12,6 @@ Ideal for receiving OTP codes, bypassing SMS verification, and managing virtual 
 ## Installation
 
 ```bash
-pip install getsms
-```
-
-Or directly from source:
-
-```bash
 pip install git+https://github.com/getsms-online/get.sms.online-python.git
 ```
 
