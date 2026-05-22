@@ -9,7 +9,13 @@ Ideal for receiving OTP codes, bypassing SMS verification, and managing virtual 
 > **Compatible with both [getsms.online](https://getsms.online) and [tellabot.com](https://www.tellabot.com) — the API is identical.**  
 > Full API documentation: [getsms.online/api_command_reference.php](https://getsms.online/api_command_reference.php)
 
+[![PyPI version](https://img.shields.io/pypi/v/get-sms-online.svg)](https://pypi.org/project/get-sms-online/)
+
 ## Installation
+
+```bash
+pip install get-sms-online
+```
 
 ```bash
 pip install git+https://github.com/getsms-online/get.sms.online-python.git
