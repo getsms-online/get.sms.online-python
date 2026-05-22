@@ -4,7 +4,7 @@ with open("README.md", encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="getsms",
+    name="get-sms-online",
     version="1.0.0",
     description="Python SDK for the Get SMS Online API",
     long_description=long_description,
