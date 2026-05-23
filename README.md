@@ -1,16 +1,16 @@
-# Get SMS Online — Python SDK
+# Get SMS Online - Python SDK
 
 Python client for the [Get SMS Online](https://getsms.online) API.  
 Receive SMS online and get one-time verification codes programmatically for WhatsApp, Telegram, Google, and 700+ other services.
 
-Use this library to automate phone number verification with temporary phone numbers — no SIM card required.  
+Use this library to automate phone number verification with temporary phone numbers - no SIM card required.  
 Ideal for receiving OTP codes, bypassing SMS verification, and managing virtual phone numbers at scale.
 
-> **Compatible with both [getsms.online](https://getsms.online) and [tellabot.com](https://www.tellabot.com) — the API is identical.**  
+> **Compatible with both [getsms.online](https://getsms.online) and [tellabot.com](https://www.tellabot.com) - the API is identical.**  
 > Full API documentation: [getsms.online/api_command_reference.php](https://getsms.online/api_command_reference.php)
- 
-[![Downloads](https://pepy.tech/badge/get-sms-online)](https://pepy.tech/project/get-sms-online)
+
 [![PyPI version](https://img.shields.io/pypi/v/get-sms-online.svg)](https://pypi.org/project/get-sms-online/)
+[![Downloads](https://pepy.tech/badge/get-sms-online)](https://pepy.tech/project/get-sms-online)
 
 ## Installation
 
@@ -147,7 +147,7 @@ print(client.balance())   # 10.0
 
 #### `wait_for_mdn(service, areacode=None, state=None, timeout=1800, poll_interval=15)`
 
-Convenience helper for priority requests — use when no numbers are immediately available.
+Convenience helper for priority requests - use when no numbers are immediately available.
 
 1. Fetches `recommended_markup` for the service via `list_services`
 2. Adds 2% and submits a priority request with that markup
@@ -170,8 +170,8 @@ Returns a request dict with the assigned MDN, or `None` if timed out / rejected.
 
 #### `wait_for_sms(request_id, timeout=900, poll_interval=15)`
 
-Convenience helper — polls `request_status` until an SMS arrives or the request expires.  
-The number is cancelled automatically by the server on timeout — no manual rejection needed.  
+Convenience helper - polls `request_status` until an SMS arrives or the request expires.  
+The number is cancelled automatically by the server on timeout - no manual rejection needed.  
 `poll_interval` is enforced to a minimum of 15 seconds.
 
 ```python
@@ -236,9 +236,9 @@ except Exception as e:
 
 ## Links
 
-- [Get SMS Online](https://getsms.online) — receive SMS online, temporary phone numbers for SMS verification
-- [API Command Reference](https://getsms.online/api_command_reference.php) — full API documentation
-- [Tell A Bot](https://www.tellabot.com) — also compatible with Tell A Bot
+- [Get SMS Online](https://getsms.online) - receive SMS online, temporary phone numbers for SMS verification
+- [API Command Reference](https://getsms.online/api_command_reference.php) - full API documentation
+- [Tell A Bot](https://www.tellabot.com) - also compatible with Tell A Bot
 
 ## Keywords
 
