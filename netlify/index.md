@@ -1,6 +1,6 @@
-# Get SMS Online — API Reference
+# Get SMS Online - API Reference
 
-Use the [GetSMS.Online](https://getsms.online) API to request temporary US phone numbers, receive SMS messages, and extract OTP verification codes programmatically.
+Use the [Get SMS Online](https://getsms.online) API to request temporary US phone numbers, receive SMS messages, and extract OTP verification codes programmatically.
 
 > [**Live API reference on GetSMS.Online:**](https://getsms.online/api_command_reference.php)
 
@@ -57,7 +57,7 @@ When `status` is `"error"`, `message` describes what went wrong.
 | `cmd` | Y | `"request"` |
 | `user` | Y | Your username or email |
 | `api_key` | Y | Your API key |
-| `service` | Y | Service name — from `list_services` or **Billing → Services and Rates** |
+| `service` | Y | Service name - from `list_services` or **Billing → Services and Rates** |
 | `mdn` | N | Request a specific phone number. Returns an error if the number is in use or no longer available |
 | `areacode` | N | Valid 3-digit US area code. Overrides `state`. Ignored when `mdn` is set |
 | `state` | N | Valid 2-letter US state abbreviation. Ignored when `mdn` or `areacode` is set |
@@ -229,7 +229,7 @@ Look up the current status of a request by its ID.
 | `api_key` | Y | Your API key |
 | `id` | Y | Request ID returned by the `request` command |
 
-**Response** — `message` array entries contain: `id`, `mdn`, `service`, `status`, `state`, `markup`, `carrier`, `till_expiration`.
+**Response** - `message` array entries contain: `id`, `mdn`, `service`, `status`, `state`, `markup`, `carrier`, `till_expiration`.
 
 **Status values:**
 
@@ -294,7 +294,7 @@ https://getsms.online/api_command.php?cmd=request_status&user=test&api_key=01234
 
 ### 3. Reject an MDN
 
-Reject a reserved number — it will not be offered to you again.  
+Reject a reserved number - it will not be offered to you again.  
 Can also cancel a priority bid in `Awaiting MDN` status.
 
 | Parameter | Required | Description |
@@ -530,6 +530,6 @@ pip install get-sms-online
 
 ## Links
 
-- [Get SMS Online](https://getsms.online) — receive SMS online, temporary US phone numbers for SMS verification
+- [Get SMS Online](https://getsms.online) - receive SMS online, temporary US phone numbers for SMS verification
 - [Live API reference](https://getsms.online/api_command_reference.php)
 - [Python SDK on GitHub](https://github.com/getsms-online/get.sms.online-python)
