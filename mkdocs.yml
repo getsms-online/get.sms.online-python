@@ -1,0 +1,25 @@
+site_name: GetSMS.Online API Reference
+site_description: API documentation for GetSMS.Online — receive SMS online with temporary US phone numbers for SMS verification and OTP codes.
+site_url: https://getsms.netlify.app
+repo_url: https://github.com/getsms-online/get.sms.online-python
+
+docs_dir: netlify
+site_dir: netlify_site
+
+theme:
+  name: material
+  palette:
+    primary: blue
+  features:
+    - content.code.copy
+    - navigation.top
+
+nav:
+  - API Reference: index.md
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
