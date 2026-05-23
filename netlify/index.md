@@ -2,6 +2,8 @@
 
 Use the [Get SMS Online](https://getsms.online) API to request temporary US phone numbers, receive SMS messages, and extract OTP verification codes programmatically.
 
+Throughout this reference, **MDN** (mobile device number) refers to a phone number assigned to your request.
+
 > [**Live API reference on GetSMS.Online:**](https://getsms.online/api_command_reference.php)
 
 ---
@@ -45,12 +47,12 @@ When `status` is `"error"`, `message` describes what went wrong.
 
 ---
 
-## One-time MDNs
+## One-time Numbers
 
-### 1. Request an MDN
+### 1. Request a number
 
 !!! note
-    Each one-time MDN request accepts a single incoming SMS. To receive another message for the same number and service, submit a fresh request and pass the `mdn` parameter to reuse the same phone number.
+    Each one-time number request accepts a single incoming SMS. To receive another message for the same number and service, submit a fresh request and pass the `mdn` parameter to reuse the same phone number.
 
 | Parameter | Required | Description |
 |-----------|----------|-------------|
@@ -138,9 +140,9 @@ Include the `markup` parameter (10–2000) to bid for a number when none are imm
 }
 ```
 
-#### Reusing an MDN
+#### Reusing a number
 
-To reuse a number previously reserved for the same service, pass the `mdn` parameter. Numbers rotate periodically and may no longer be available.
+To reuse a virtual number previously reserved for the same service, pass the `mdn` parameter. Numbers rotate periodically and may no longer be available.
 
 ```
 https://getsms.online/api_command.php?cmd=request&user=test&api_key=0123456789&service=Amazon&mdn=12345678901
@@ -153,7 +155,7 @@ https://getsms.online/api_command.php?cmd=request&user=test&api_key=0123456789&s
 
 ---
 
-#### Requesting the same MDN for multiple services simultaneously
+#### Requesting the same temporary number for multiple services simultaneously
 
 Pass up to 5 comma-separated service names in `service` to obtain one phone number that works for all of them at the same time. Priority bids are created automatically and markup is set high enough to win for each service.
 
@@ -292,9 +294,9 @@ https://getsms.online/api_command.php?cmd=request_status&user=test&api_key=01234
 
 ---
 
-### 3. Reject an MDN
+### 3. Reject a number
 
-Reject a reserved number - it will not be offered to you again.  
+Reject a reserved mobile number — it will not be offered to you again.  
 Can also cancel a priority bid in `Awaiting MDN` status.
 
 | Parameter | Required | Description |
@@ -411,10 +413,7 @@ Retrieve available services with pricing and availability data.
 |-------|-------------|
 | `name` | Service name |
 | `price` | One-time SMS price |
-| `ltr_price` | Long-term rental price (30 days) |
-| `ltr_short_price` | Long-term rental price (3 days) |
 | `otp_available` | Approximate count of available one-time numbers |
-| `ltr_available` | Approximate count of available long-term numbers |
 | `recommended_markup` | Suggested priority bid (only returned when querying a single service) |
 
 !!! note
@@ -433,10 +432,7 @@ https://getsms.online/api_command.php?cmd=list_services&user=test&api_key=012345
     {
       "name": "Google",
       "price": "1.00",
-      "ltr_price": "20.00",
-      "ltr_short_price": "5.00",
       "otp_available": "74",
-      "ltr_available": "3",
       "recommended_markup": "10"
     }
   ]
