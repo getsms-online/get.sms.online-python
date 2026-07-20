@@ -1,7 +1,6 @@
 # Get SMS Online - Python SDK
 
-Python client for the [Get SMS Online](https://getsms.online) API.  
-Receive SMS online and get one-time verification codes programmatically for WhatsApp, Telegram, Google, and 700+ other services.
+Python client for the [Get SMS Online](https://getsms.online) API. Receive SMS online and get one-time verification codes programmatically for WhatsApp, Telegram, Google, and 700+ other services.
 
 Use this library to automate phone number verification with temporary phone numbers - no SIM card required.  
 Ideal for receiving OTP codes, bypassing SMS verification, and managing virtual phone numbers at scale.
@@ -238,13 +237,6 @@ except Exception as e:
 - [Get SMS Online](https://getsms.online) - receive SMS online, temporary phone numbers for SMS verification
 - [API Command Reference](https://getsms.online/api_command_reference.php) - full API documentation
 - [Tell A Bot](https://www.tellabot.com) - also compatible with Tell A Bot
-
-## Keywords
-
-receive sms online · temporary phone number · virtual phone number · disposable phone number ·
-sms verification · bypass sms · otp code · phone number verification · free sms receive ·
-temporary number for whatsapp · temporary number for telegram · temporary number for google ·
-sms api python · receive otp online
 
 ## License
 
